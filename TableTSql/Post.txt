@@ -1,0 +1,16 @@
+CREATE TABLE Post (
+    Id uniqueidentifier PRIMARY KEY,
+    UserId uniqueidentifier NOT NULL,
+    Description nVARCHAR(MAX),
+    Image nVarChar(MAX),
+    CreatedDate DATETIME,
+    IsActive BIT,
+    IsDelete BIT,
+    DeletedDate DATETIME,
+    ModifiedDate DATETIME,
+    Location UNIQUEIDENTIFIER
+
+    PRIMARY KEY (Id),
+    FOREIGN KEY (UserId) REFERENCES Users (Id)
+    
+);
