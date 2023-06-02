@@ -1,0 +1,10 @@
+CREATE TABLE Likess (
+    Id uniqueidentifier NOT NULL,
+    UserId uniqueidentifier NOT NULL,
+    PostId uniqueidentifier NOT NULL,
+    LikeDate DATETIME NOT NULL,
+
+    PRIMARY KEY (Id),
+    FOREIGN KEY (UserId) REFERENCES Users (Id),
+    FOREIGN KEY (PostId) REFERENCES Post (Id)
+);

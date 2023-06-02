@@ -1,0 +1,7 @@
+CREATE TABLE Explore (
+    Id uniqueidentifier NOT NULL,
+    UserId uniqueidentifier NOT NULL,
+    RecommendedPostID uniqueidentifier NOT NULL,
+    FOREIGN KEY (UserId) REFERENCES Users (Id),
+    FOREIGN KEY (RecommendedPostID) REFERENCES Post (Id)
+);

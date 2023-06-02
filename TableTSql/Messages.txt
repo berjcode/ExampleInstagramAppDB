@@ -1,0 +1,15 @@
+
+CREATE TABLE Messages (
+    MessageID uniqueidentifier PRIMARY KEY,
+    SenderUserID uniqueidentifier NOT NULL,
+    ReceiverUserID uniqueidentifier NOT NULL,
+    Content nvarchar(max) NOT NULL,
+    SentDate datetime NOT NULL,
+    IsRead bit NOT NULL,
+    FOREIGN KEY (SenderUserID) REFERENCES Users (Id),
+    FOREIGN KEY (ReceiverUserID) REFERENCES Users (Id)
+);
+
+
+
+

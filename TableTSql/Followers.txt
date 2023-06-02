@@ -1,0 +1,9 @@
+Followers Table
+CREATE TABLE Followers (
+    Id uniqueidentifier NOT NULL,
+    UserId uniqueidentifier NOT NULL,
+    FollowDate DATETIME NOT NULL,
+    PRIMARY KEY ( Id, UserId),
+    FOREIGN KEY (Id) REFERENCES Users (Id),
+    FOREIGN KEY (UserID) REFERENCES Users (Id)
+);

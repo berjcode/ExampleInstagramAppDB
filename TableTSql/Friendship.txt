@@ -1,0 +1,10 @@
+CREATE TABLE Friendship (
+    Id  uniqueidentifier PRIMARY KEY,
+    SenderUserId uniqueidentifier NOT NULL,
+    ReceiverUserId uniqueidentifier NOT NULL,
+    status tinyint NOT NULL
+    
+    PRIMARY KEY (Id),
+    FOREIGN KEY (UserId) REFERENCES Users (Id)
+    
+);

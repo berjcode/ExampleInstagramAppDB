@@ -1,0 +1,23 @@
+
+CREATE TABLE dbo.Users (
+    Id uniqueidentifier NOT NULL,
+    UserName NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(50),
+    FullName NVARCHAR(100),
+    ProfilePhoto NVARCHAR(100),
+    Biography NVARCHAR(MAX),
+    PhoneNumber NVARCHAR(20),
+    isPrivate BIT NOT NULL,
+    JoinedDate DATETIME NOT NULL,
+    ModifiedDate DATETIME,
+    IsActive BIT NOT NULL,
+    IsDelete BIT,
+    DeletedDate DATETIME,
+    DateOfBirth DATE NOT NULL,
+    Gender NVARCHAR(10) NOT NULL,
+    Location NVARCHAR(100),
+    Website NVARCHAR(100),
+    PostCount INT NOT NULL,
+    StoryCount INT NOT NULL
+);

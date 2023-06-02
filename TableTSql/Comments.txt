@@ -1,0 +1,15 @@
+CREATE TABLE Comments (
+    Id uniqueidentifier  NOT NULL,
+    PostId uniqueidentifier NOT NULL,
+    UserId uniqueidentifier NOT NULL,
+    CommentText nVARCHAR(MAX),
+    CreatedDate DATETIME,
+    ModifiedDate DATETIME,
+    IsDeleted BIT,
+    DeletedDate DATETIME
+
+
+    PRIMARY KEY (Id),
+    FOREIGN KEY (UserId) REFERENCES Users (Id),
+    FOREIGN KEY (PostId) REFERENCES Post (Id)
+);
